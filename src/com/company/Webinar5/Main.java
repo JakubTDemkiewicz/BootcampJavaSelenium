@@ -23,18 +23,14 @@ public class Main {
     public static int handleMenuOptions(){
         switch (readResponseFromUser()){
             case 1:
-                System.out.println("Please provide the size of Table " +
-                        "(1-25 will be displayed if you provide wrong value)" +": ");
-                displayMultiplicationTable(createMultiplicationTable(readResponseFromUser()));
-                System.out.println("\n");
+                createAndDisplayCustomMultiplicationTable();
                 break;
             case 2:
                 displayMultiplicationTable(createMultiplicationTable(10));
                 System.out.println("\n");
                 break;
             case 3:
-                System.out.println("Provide a number(if not correct the result will be for 5!): " );
-                System.out.println("Result: " + factorial(readResponseFromUser()) + "\n");
+                displayFactorialResult();
                 break;
             case 0:
                 System.out.println("Bye bye");
@@ -45,30 +41,49 @@ public class Main {
         return Integer.MIN_VALUE;
     }
 
+    public static void displayFactorialResult() {
+        System.out.println("Provide a number: " );
+        int value = readResponseFromUser();
+        if (value >= 0)
+            System.out.println("Result: " + factorial(value) + "\n");
+        else
+            System.out.println("Wrong value!");
+    }
+
+    public static void createAndDisplayCustomMultiplicationTable() {
+        System.out.println("Please provide the size of Table: ");
+        int value =readResponseFromUser();
+        if (value != -1)
+            displayMultiplicationTable(createMultiplicationTable(value));
+        else
+            System.out.println("Wrong value!");
+        System.out.println("\n");
+    }
+
     public static int readResponseFromUser(){
         Scanner scanner = new Scanner(System.in);
         try {
             return Math.abs(Integer.parseInt(scanner.nextLine()));
         }catch (NumberFormatException e){
-            return 5;
+            return -1;
         }
     }
 
     public static int[][] createMultiplicationTable(int size){
-        int[][] table = new int[size+1][size+1];
+        int[][] table = new int[size][size];
 
-        for (int i = 1; i < table.length; i++) {
-            for (int j = 1; j < table.length; j++) {
-                table[i][j] = i*j;
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table.length; j++) {
+                table[i][j] = (i+1)*(j+1);
             }
         }
         return table;
     }
 
     public static void displayMultiplicationTable(int [][] table){
-        for (int i = 1; i <table.length; i++) {
+        for (int i = 0; i <table.length; i++) {
             System.out.println();
-            for (int j = 1; j < table.length; j++) {
+            for (int j = 0; j < table.length; j++) {
                 System.out.print(" " + table[i][j] + " ");
             }
         }
