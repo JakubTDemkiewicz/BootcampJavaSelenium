@@ -53,7 +53,7 @@ public class Main {
     public static void createAndDisplayCustomMultiplicationTable() {
         System.out.println("Please provide the size of Table: ");
         int value =readResponseFromUser();
-        if (value != -1)
+        if (value > 0)
             displayMultiplicationTable(createMultiplicationTable(value));
         else
             System.out.println("Wrong value!");
