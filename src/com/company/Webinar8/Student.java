@@ -18,7 +18,7 @@ public class Student extends Person {
     }
 
     @Override
-    void learnOrTeach() {
+    void reasonToVisitCollege() {
         System.out.println("In the college I am going to learn!");
     }
 
@@ -28,7 +28,7 @@ public class Student extends Person {
     }
 
     @Override
-    public void displayInformationAboutPerson() {
+    protected void displayInformationAboutPerson() {
         super.displayInformationAboutPerson();
         System.out.printf("I study %s and I am on %d year on the %d semester. ", this.fieldOfStudy,
                 this.calculateYear(), this.semester);

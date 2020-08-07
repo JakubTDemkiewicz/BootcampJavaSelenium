@@ -16,7 +16,7 @@ public class Teacher extends Person {
     }
 
     @Override
-    void learnOrTeach() {
+    void reasonToVisitCollege() {
         System.out.println("\nIn the college I will teach. ");
     }
 
@@ -26,7 +26,7 @@ public class Teacher extends Person {
     }
 
     @Override
-    public void displayInformationAboutPerson() {
+    protected void displayInformationAboutPerson() {
         super.displayInformationAboutPerson();
         System.out.printf("My Academic Degree is %s and specialization is %s. I earn %.2f a month. As annual bonus I get " +
                         "%.2f"
