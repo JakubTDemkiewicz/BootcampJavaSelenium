@@ -1,0 +1,21 @@
+package com.company.Webinar8;
+
+abstract class Person {
+    private final String name;
+    private final String surname;
+    private final int age;
+
+    protected Person(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    abstract void learnOrTeach();
+
+    abstract void informationAboutVacations();
+
+    public void displayInformationAboutPerson() {
+        System.out.printf("\nHey! My name is %s %s and I am %d old. ", this.name, this.surname, this.age);
+    }
+}
