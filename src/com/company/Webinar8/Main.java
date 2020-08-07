@@ -13,9 +13,7 @@ public class Main {
     }
 
     private static void displayInformation(Person person) {
-        person.displayInformationAboutPerson();
-        person.learnOrTeach();
-        person.informationAboutVacations();
+        person.displayAllInformationAboutPerson();
         System.out.println();
     }
 

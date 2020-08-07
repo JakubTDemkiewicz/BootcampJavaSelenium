@@ -11,11 +11,16 @@ abstract class Person {
         this.age = age;
     }
 
-    abstract void learnOrTeach();
+    abstract void reasonToVisitCollege();
 
     abstract void informationAboutVacations();
 
-    public void displayInformationAboutPerson() {
+    protected void displayInformationAboutPerson() {
         System.out.printf("\nHey! My name is %s %s and I am %d old. ", this.name, this.surname, this.age);
+    }
+    public void displayAllInformationAboutPerson(){
+        displayInformationAboutPerson();
+        reasonToVisitCollege();
+        informationAboutVacations();
     }
 }
