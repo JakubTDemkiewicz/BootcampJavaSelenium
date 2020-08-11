@@ -1,6 +1,6 @@
-package com.company.Webinar8v2;
+package com.company.Webinar9;
 
-abstract class Person {
+public abstract class Person {
     private final String name;
     private final String surname;
     private final int age;
@@ -11,14 +11,23 @@ abstract class Person {
         this.age = age;
     }
 
-    abstract void reasonToVisitCollege();
+    public String getName() {
+        return name;
+    }
 
-    abstract void informationAboutVacations();
+    public String getSurname() {
+        return surname;
+    }
+
+    protected abstract void reasonToVisitCollege();
+
+    protected abstract void informationAboutVacations();
 
     protected void displayInformationAboutPerson() {
         System.out.printf("\nHey! My name is %s %s and I am %d old. ", this.name, this.surname, this.age);
     }
-    public void displayAllInformationAboutPerson(){
+
+    public void displayAllInformationAboutPerson() {
         displayInformationAboutPerson();
         reasonToVisitCollege();
         informationAboutVacations();
