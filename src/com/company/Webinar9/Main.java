@@ -28,9 +28,9 @@ public class Main{
     }
 
     private static void displayExamsList(Teacher teacher){
-        if (!teacher.getExamStudentList().isEmpty()){
+        if (!teacher.getExamStudentsHashSet().isEmpty()){
             System.out.println(teacher.getSpecialization() + " exam list: ");
-            for (Student student : teacher.getExamStudentList()) {
+            for (Student student : teacher.getExamStudentsHashSet()) {
                 System.out.println(student.displayInformationAboutGrade(teacher.getSpecialization()));
             }
             System.out.println();

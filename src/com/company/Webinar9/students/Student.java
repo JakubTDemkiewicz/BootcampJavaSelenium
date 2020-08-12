@@ -14,7 +14,7 @@ public class Student extends Person implements LearningMethodsAndExams, FreeTime
     private String fieldOfStudy;
     private int semester;
     private String vacationInformation;
-    private LearningMethodsAndExams.learningMethod learningMethod;
+    private LearningMethods learningMethod;
     private Map<String, Integer> index = new HashMap<>();
 
     public Student(String name, String surname, int age, String fieldOfStudy, int semester, String vacationInformation) {
@@ -73,7 +73,7 @@ public class Student extends Person implements LearningMethodsAndExams, FreeTime
     }
 
     @Override
-    public void setLearningMethods(learningMethod learningMethod) {
+    public void setLearningMethods(LearningMethods learningMethod) {
         this.learningMethod = learningMethod;
     }
 

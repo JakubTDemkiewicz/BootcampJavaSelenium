@@ -1,9 +1,9 @@
 package com.company.Webinar9.students;
 
 interface LearningMethodsAndExams {
-    enum  learningMethod{
+    enum LearningMethods {
         Internet, Books
     }
-    void setLearningMethods(LearningMethodsAndExams.learningMethod method);
+    void setLearningMethods(LearningMethods method);
     boolean isExamPassed(String examName);
 }

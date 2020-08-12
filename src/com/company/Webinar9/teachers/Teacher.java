@@ -1,17 +1,16 @@
 package com.company.Webinar9.teachers;
 
 import com.company.Webinar9.Person;
-import com.company.Webinar9.Subjects;
 import com.company.Webinar9.students.Student;
 
 import java.util.*;
 
-public class Teacher extends Person implements ExamsAndResearch, Subjects {
+public class Teacher extends Person implements ExamsAndResearch {
     private final String academicDegree;
     private final String specialization;
     private final String vacationInformation;
     private final double salary;
-    private Set<Student> examStudentList = new HashSet<>();
+    private Set<Student> examStudentsHashSet = new HashSet<>();
     private String researchSubject;
 
     public Teacher(String name, String surname, int age, String specialization, String academicDegree,
@@ -27,8 +26,8 @@ public class Teacher extends Person implements ExamsAndResearch, Subjects {
         return specialization;
     }
 
-    public Set<Student> getExamStudentList() {
-        return this.examStudentList;
+    public Set<Student> getExamStudentsHashSet() {
+        return this.examStudentsHashSet;
     }
 
     @Override
@@ -62,7 +61,7 @@ public class Teacher extends Person implements ExamsAndResearch, Subjects {
                 notPassedStudents.add(s);
             }
         });
-        this.examStudentList = notPassedStudents;
+        this.examStudentsHashSet = notPassedStudents;
     }
 
     @Override

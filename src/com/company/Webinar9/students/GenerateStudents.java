@@ -33,12 +33,7 @@ public class GenerateStudents {
     }
 
     private void setLearningMethod(){
-        for (int i = 0; i< students.size()/2; i++) {
-            students.get(i).setLearningMethods(LearningMethodsAndExams.learningMethod.Books);
-        }
-        for (int i = students.size()/2; i < students.size(); i++) {
-            students.get(i).setLearningMethods(LearningMethodsAndExams.learningMethod.Internet);
-        }
+        students.forEach(student -> student.setLearningMethods(LearningMethodsAndExams.LearningMethods.values()[(int) (Math.random() * LearningMethodsAndExams.LearningMethods.values().length)]));
     }
 
     private void createStudent(String name, String surname, int age, String fieldOfStudy, int semester,
