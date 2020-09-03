@@ -1,0 +1,15 @@
+Violet,Hill,21,books,Informatic,swimming,beer,5
+Violet,Hill,21,books,Informatic,swimming,beer,5
+Amelia,Brooks,32,books,History,biking,beer,1
+Aldus,Wright,23,internet,Spain,something,beer,2
+Audrey,Edwards,18,internet,W-F,biking,beer,3
+Emma,Johnson,20,books,Spain,swimming,beer,4
+Lenny,Mason,50,internet,English,swimming,vodka,5
+Aldus,Parker,21,books,English,biking,vodka,6
+Lily,Tucker,29,books,Spain,something,beer,7
+Garry,Montgomery,20,internet,Mathematic,learning,whisky,4
+Hailey,Morgan,26,books,Spain,nothing,whisky,5
+Edgar,Warren,20,books,English,nothing,whisky,6
+Roman,Baker,23,internet,History,hiking,vodka,2
+Carina,Reed,34,internet,History,hiking,beer,2
+Freddie,Miller,25,internet,Informatic,hiking,whisky,1
